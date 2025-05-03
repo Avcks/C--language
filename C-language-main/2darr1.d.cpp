@@ -25,6 +25,6 @@ int main()
        }
     }
     printf("\n");
-    d = t/(rs*cs);
-    printf("Average of an Array: %f",d);
+    d = (float)t/(rs*cs);
+    printf("Average of an Array: %.2f",d);
 }
