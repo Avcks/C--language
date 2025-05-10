@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
+int main() 
+{
     char s[100];
     int l, b;
     int a[100];
@@ -25,7 +26,6 @@ int main() {
         }
     printf("%c => %d\n", s[i], b);
     }
-
 }
 
 
