@@ -1,53 +1,81 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int cal()
-{
-	int choice, a, b, i;
-	
-	printf("press 1 for +\n");
-    printf("press 2 for -\n");
-    printf("press 3 for *\n");
-    printf("press 4 for /\n");
-    printf("press 5 for %%\n");
-    printf("press 0 for for exit\n");
-
-	printf("Pless enter your choice: ");
-    scanf("%d",&choice);
-
-    printf("Enter the first Number: ");
-    scanf("%d",&a);
-    printf("Enter the second Number: ");
-    scanf("%d",&b);
-    
-	if(choice!=0){
-		
-		switch (choice)
-	{
-		case 1: printf("The Addition of your numbers %d & %d is: %d\n",a , b, a+b);
-	    break;
-		case 2: printf("The Subration of your numbers %d & %d is: %d\n",a , b, a-b);
-		break;
-		case 3: printf("The Multiplation of your numbers %d & %d is: %d\n",a , b, a*b);
-		break;
-		case 4: printf("The Division of your numbers %d & %d is: %d\n",a , b, a/b);
-		break;
-		case 5: printf("The Modulas of your numbers %d & %d is: %d\n", a, b, a%b);
-		break;
-		case 6: 
-		break;
-		default:
-		break;
-    }
-        return i==1;
-	}else{
-		return i==5;
-	}
-	
+// User Defined Functions
+int add(int a, int b) {
+    return a + b;
 }
 
-int main()
-{
-	for(int i=1;i>=0;i--){
-    cal();
-	}
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+float divide(int a, int b) {
+    if (b != 0)
+        return (float)a / b;
+    else {
+        printf("Error: Division by zero!\n");
+        return 0;
+    }
+}
+
+int modulus(int a, int b) {
+    if (b != 0)
+        return a % b;
+    else {
+        printf("Error: Modulus by zero!\n");
+        return 0;
+    }
+}
+
+int main() {
+    int choice, num1, num2;
+    
+    while (1) {
+        // Menu
+        printf("\nPress 1 for +\n");
+        printf("Press 2 for -\n");
+        printf("Press 3 for *\n");
+        printf("Press 4 for /\n");
+        printf("Press 5 for %%\n");  // Use %% to print a single %
+        printf("Press 0 for the exit\n");
+
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 0) {
+            printf("Exiting the program.\n");
+            break;
+        }
+
+        printf("Enter the first number: ");
+        scanf("%d", &num1);
+        printf("Enter the second number: ");
+        scanf("%d", &num2);
+
+        switch (choice) {
+            case 1:
+                printf("Addition of %d and %d is %d\n", num1, num2, add(num1, num2));
+                break;
+            case 2:
+                printf("Subtraction of %d and %d is %d\n", num1, num2, subtract(num1, num2));
+                break;
+            case 3:
+                printf("Multiplication of %d and %d is %d\n", num1, num2, multiply(num1, num2));
+                break;
+            case 4:
+                printf("Division of %d and %d is %.2f\n", num1, num2, divide(num1, num2));
+                break;
+            case 5:
+                printf("Modulus of %d and %d is %d\n", num1, num2, modulus(num1, num2));
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+
+   
 }
