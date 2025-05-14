@@ -20,7 +20,7 @@ float d(int a, int b)
     if(b!=0){
         return (float)a/b;
     }else{
-        printf("Division by zero is not possiable\n");
+        printf("Division of zero is not possiable\n");
         return 0;
     }
 }
@@ -72,7 +72,7 @@ int main() {
                 printf("Modulus of %d and %d is %d\n", x, y, m(x, y));
                 break;
             default:
-                printf("choise not found.\n");
+                printf("choise is inviled.\n");
         }
     }
 
