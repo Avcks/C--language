@@ -28,7 +28,7 @@ int main() {
     int choice, x, y;
     for (;;)
     {
-        printf("\nPress 1 for +\n");
+        printf("Press 1 for +\n");
         printf("Press 2 for -\n");
         printf("Press 3 for *\n");
         printf("Press 4 for /\n");
@@ -40,7 +40,10 @@ int main() {
         if (choice == 0) 
         {
             break;
-        }
+        } else if(choice>5){
+        	printf("choice is invalid, try again with given choice.");
+        	break;
+		}
         printf("Enter the first number: ");
         scanf("%d", &x);
         printf("Enter the second number: ");
@@ -49,44 +52,26 @@ int main() {
         {
             case 1:
                 printf("Addition of %d and %d is %d\n", x, y, add(x, y));
+                printf("\n");
                 break;
             case 2:
                 printf("Subtraction of %d and %d is %d\n", x, y, s(x, y));
+                printf("\n");
                 break;
             case 3:
                 printf("Multiplication of %d and %d is %d\n", x, y, m(x, y));
+                printf("\n");
                 break;
             case 4:
                 printf("Division of %d and %d is %.2f\n", x, y, d(x, y));
+                printf("\n");
                 break;
             case 5:
                 printf("Modulus of %d and %d is %d\n", x, y, mo(x, y));
+                printf("\n");
                 break;
             default:
-                printf("Choice is invalid.\n");
+                break;
         }
     }
 }
-
-/*
-Press 1 for +
-Press 2 for -
-Press 3 for *
-Press 4 for /
-Press 5 for %
-Press 0 for the exit
-
-Enter your choice: 1
-Enter the first number: 1
-Enter the second number: 14
-Addition of 1 and 14 is 15
-
-Press 1 for +
-Press 2 for -
-Press 3 for *
-Press 4 for /
-Press 5 for %
-Press 0 for the exit
-
-Enter your choice: 0
-*/
