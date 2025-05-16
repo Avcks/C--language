@@ -75,3 +75,32 @@ int main() {
         }
     }
 }
+
+
+
+
+
+/*
+
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for the exit
+
+Enter your choice: 5
+Enter the first number: 2
+Enter the second number: 2
+Modulus of 2 and 2 is 0
+
+Press 1 for +
+Press 2 for -
+Press 3 for *
+Press 4 for /
+Press 5 for %
+Press 0 for the exit
+
+Enter your choice: 0
+
+*/
