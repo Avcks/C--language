@@ -1,0 +1,12 @@
+Student 1:
+Name: aum
+Course: as
+
+Student 2:
+Name: sasaf
+Course: as
+
+Student 3:
+Name: asdaf
+Course: as
+
